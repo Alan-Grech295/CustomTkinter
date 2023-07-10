@@ -315,6 +315,9 @@ class CTkSegmentedButton(CTkFrame):
 
         check_kwargs_empty(kwargs, raise_error=True)
 
+    def get_buttons(self):
+        return self._buttons_dict
+
     def cget(self, attribute_name: str) -> any:
         if attribute_name == "width":
             return super().cget(attribute_name)
